@@ -13,7 +13,7 @@ var products = [{
     price: "145000",
     category: ["Motorcycle"],
     vote:[{ 
-      one_star: 50,
+      star: 50,
       men: 40,
       women: 10 
     }]
@@ -23,7 +23,7 @@ var products = [{
     price: "74900",
     category: ["Apple","Laptop"],
     vote:[{ 
-      one_star: 5,
+      star: 5,
       men: 4,
       women: 1 
     }]
