@@ -6,6 +6,10 @@ var GraphQLObjectType = graphql.GraphQLObjectType;
 var GraphQLString = graphql.GraphQLString;
 var products = require('./data');
 var app = express();
+var str = {
+  name : "fdasfsad",
+  fdsafa : 12
+}
 var PORT = process.env.port || 3000
 var queryType = new GraphQLObjectType({
   name: "queryProduct",
@@ -22,6 +26,7 @@ var queryType = new GraphQLObjectType({
 var MyGraphQLSchema = new GraphQLSchema({
   query: queryType
 });
+
 app.use('/graphql', graphqlHTTP({
   schema: MyGraphQLSchema,
   graphiql: true
