@@ -21,3 +21,16 @@ services:
     environment:
       - RABBITMQ_USERNAME = "username"
       - RABBITMQ_PASSWORD = "password"
+  mongo:
+    image: mongo:3.4
+    container_name: mongo
+    ports:
+      - 27011:27017
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: 'ws'
+      MONGO_INITDB_ROOT_PASSWORD: 'ws!'
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '50m'
